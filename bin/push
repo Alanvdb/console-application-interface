@@ -34,6 +34,7 @@ $process = new Process(['git', 'push', 'origin', 'master']);
 $process->start();
 $process->wait();
 if (!$process->isSuccessful()) {
-    throw new Exception($process->getErrorOutput());
+    echo $process->getErrorOutput();
+    exit(2);
 }
 echo " Done.\n";
