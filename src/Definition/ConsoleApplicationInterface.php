@@ -6,4 +6,5 @@ interface ConsoleApplicationInterface
 {
     public function getName() : string;
     public function getVersion() : string;
+    public function run(?InputInterface $input = null, ?OutputInterface $output = null): int;
 }
